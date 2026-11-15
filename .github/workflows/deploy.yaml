@@ -11,11 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: hashicorp/setup-terraform@v4
-         with:
+        with:
           terraform_version: "1.14.8"
       
       - uses: aws-actions/configure-aws-credentials@v6.3.0
-         with:
+        with:
           aws-access-key-id: ${{ secrets.ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.SECRET_KEY_VALUE }}
       - name: Check test directory
